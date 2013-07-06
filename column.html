@@ -19,7 +19,6 @@
 
 	<meta name="font:Body" content='Georgia,serif'/>
 
-	<meta name="if:Infinite scroll" content="1"/>
 	<meta name="if:Masthead search" content="0"/>
 	<meta name="if:Masthead portrait" content="0"/>
 
@@ -341,12 +340,10 @@
 	<!--jQuery Masonry. Pull at desandro/masonry (GitHub)-->
 	<script src="http://static.tumblr.com/wgijwsy/Ebfm2v4gy/jquery.masonry.min.js"></script>
 	
-	{block:IfInfiniteScroll}
 	<!--jQuery infiniteScroll. Pull at paulirish/infinite-scroll (GitHub)-->
 	<script src="http://static.tumblr.com/wgijwsy/u2vm2hxv6/jquery.infinitescroll.min.js"></script>
 	<!--jQuery imagesLoaded. Pull at desandro/imagesloaded (GitHub) -->
 	<script src="http://static.tumblr.com/iwtk77u/Yhym2yygt/jquery.imagesloaded.min.js"></script>
-	{/block:IfInfiniteScroll}
 
 	<!--
 	Code for infinite scroll and grid layout
@@ -357,7 +354,6 @@
 	(function() {
 		var $tumblelog = $('#content');
 		
-		{block:IfInfiniteScroll}
 		$tumblelog.infinitescroll({
 			navSelector  : ".pagination",            
 			nextSelector : ".pagination a:first",    
@@ -379,7 +375,6 @@
 				});
 			  }
 		);
-		{/block:IfInfiniteScroll}
 		
 		$tumblelog.imagesLoaded( function(){
 		  $tumblelog.masonry({
